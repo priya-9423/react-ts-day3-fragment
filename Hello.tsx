@@ -1,3 +1,7 @@
 import React from 'react';
 
-export default ({ name }) => <h1>Hello {name}!</h1>;
+export default function Hello({lName, name}){
+  return (
+<h1>Hello {name} {lName}!</h1>
+  )
+} 

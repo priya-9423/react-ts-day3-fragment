@@ -13,7 +13,7 @@ class App extends Component<AppProps, AppState> {
     super(props);
     this.state = {
       name: "React",
-      lName: "test",
+      lName: "redux",
       salary: 1000
     };
     var test1 = {
@@ -38,15 +38,24 @@ class App extends Component<AppProps, AppState> {
     let {lName: t1, ...all} = test1;
     console.log(t1);
     console.log(all);
+    this.testDestructureFunction = this.testDestructureFunction.bind(this);
+    this.testDestructureFunction(test1);
   }
 
+  
   render() {
     return (
       <div>
-        <Hello name={this.state.name} />
+        <Hello {...this.state} />
         <table />
       </div>
     );
+  }
+
+//evaluating values using distructuring
+  testDestructureFunction({name: firstName, lName: lastName})
+  {
+    console.log(firstName +' '+ lastName);
   }
 }
 
