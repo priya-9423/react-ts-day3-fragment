@@ -47,7 +47,7 @@ class App extends Component<AppProps, AppState> {
     return (
       <div>
         <Hello {...this.state} />
-        <table />
+        
       </div>
     );
   }
